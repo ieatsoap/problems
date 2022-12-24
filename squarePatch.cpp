@@ -11,13 +11,15 @@ vector< vector<int> > squarePatch(int n) {
 }
 
 int main() {
-    int n = 3;
-    vector< vector<int> > g = {
-        {3, 3, 3}, 
-		{3, 3, 3}, 
-		{3, 3, 3}
-    }, in = squarePatch(3);
-    if (in == g) cout << "true" << endl;
-    else cout << "fake" << endl;
+    int n;
+    cout << "n : ";
+    cin >> n;
+    vector< vector<int> > in = squarePatch(n);
+    for (int i = 0; i < in.size(); i ++) {
+        for (int j = 0, k = in.at(i).size(); j < k; j ++) {
+            cout << in.at(i).at(j) << " ";
+            if (j + 1 == k) cout << endl;
+        }
+    }
     return 0;
 }
