@@ -53,10 +53,10 @@ string tapCode(string text) {
 }
 
 int main() {
-    string u = tapCode("ankle");
-    string g = ". . ... ... . ... ... . . .....";
+    string user_in;
+    cout << "string : ";
+    cin >> user_in;
+    string u = tapCode(user_in);
     cout << u << endl;
-    if (!u.compare(g)) cout << "true" << endl;
-    else cout << "false" << endl;
     return 0; 
 }
