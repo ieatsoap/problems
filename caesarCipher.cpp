@@ -27,9 +27,12 @@ string caesarCipher(string s, int k) {
 }
 
 int main() {
-    string bruh = caesarCipher("middle-Outz", 2);
-    string real = "okffng-Qwvb";
-    if (!bruh.compare(real)) cout << "real" << endl;
-    else cout << "fake. yours: " << bruh << " ---------- real: " << bruh << endl;
+    string user_input;
+    int turns;
+    cout << "(string int) : ";
+    cin >> user_input >> turns;
+    
+    string bruh = caesarCipher(user_input, turns);
+    cout << bruh << endl;
     return 0;
 }
